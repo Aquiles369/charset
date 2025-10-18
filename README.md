@@ -11,7 +11,7 @@
 <picture> <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">  </picture>
 
 
-### <picture> <img src = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGNpcXkya3F1NGF3NWNxdDI2bzg0c3NzMmhuZWFlMHNsOGI3YmoycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/P4sS7sU2ufXz183cfy/giphy.gif" width = 75px>  </picture> Catálogo interactivo de códigos HTTP
+### <picture> <img src = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3ZkZmYxMG1uZWdpOWdyd2RnbmZxeW12YTNlbHRhZTFlMWdiZmFiNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/N1n2Z59pZCslW/giphy.gif" width = 75px>  </picture> Charset
 
 <br>
 
@@ -26,7 +26,7 @@
 <picture> <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width ="1050" > </picture>
 <br>
 
-### <picture> <img src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjExOWp1d25mbDh2YnJhdHJ6OHdlZXhoNGZmdmtlb2F3NnlhcWs0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Ha2DszQVpjI1AxvW5h/giphy.gif" width = 75px>  </picture> Problema que resuelve<br><br>
+### <picture> <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXk0OXNnNHk0cDV3aWdwMTh2a3pwbmg3b3lha3dubzc5dmdlb3M5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/11QU48jrASWMsE/giphy.gif" width = 75px>  </picture> Problema que resuelve<br><br>
 **Cuando estás auditando aplicaciones web o haciendo bug bounty, interpretar correctamente las respuestas HTTP es clave para entender el comportamiento del backend, detectar configuraciones incorrectas, encontrar vectores explotables o incluso descubrir endpoints sensibles.<br><br>
 • El problema es que la mayoría de las veces:<br><br>
 • Tenés que buscar cada código en Google manualmente.<br><br>
@@ -36,7 +36,7 @@
 
 <br>
 
-### <picture> <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnJ1Z2xlanAxMHM2bWZ2djM3Y3h5cTZleHA0cGJ2bmpmMXRucjlweSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/lHXsw5hwW0UAnSdHAH/giphy.gif" width = 75px>  </picture> Qué aporta y cómo beneficia <br><br>
+### <picture> <img src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3VtZHVwd2V3dWV1OWtkYTR4dmhuZXV3cHd1NzJmcGsxaGV4YnZ5ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/HHwI031emo0GQ/giphy.gif" width = 75px>  </picture> Qué aporta y cómo beneficia <br><br>
 **• Conocimiento completo en segundos: reúne todos los códigos oficiales (1xx–5xx) y más de 20 códigos “extra” reales utilizados por proveedores como Cloudflare, Nginx o cPanel, incluso los menos conocidos como 425 Too Early. Esto te evita perder tiempo buscando documentación dispersa y te da acceso inmediato a toda la información relevante.<br><br>
 • Aceleración de tu flujo de trabajo: el buscador interno y el soporte para Ctrl + F permiten saltar al instante al código que necesitás analizar, por número, nombre o descripción. Esto agiliza la toma de decisiones y te hace avanzar mucho más rápido en las fases de recon y explotación.<br><br>
 • Mejor contexto y decisiones más inteligentes: entender en segundos qué significa un estado HTTP te da una ventaja táctica: sabés si un endpoint redirige, si hay filtrado activo, si la respuesta proviene de un proxy intermedio o si revela detalles del backend. Esa información puede marcar la diferencia entre un hallazgo superficial y una vulnerabilidad crítica.<br><br>
@@ -50,7 +50,7 @@
 <picture> <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width ="1050" > </picture>
 <br>
 
-### <picture> <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExczVrcnhwNDAzajJmMWhrN3p3OGg2b3B0emRoOGFlMnNlNm04Y2I3dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/nndsQSOMEUToRELiAE/giphy.gif" width = 80px>  </picture> Resumen rápido
+### <picture> <img src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWxiOWdscHZ3endqOWM0ZjJ0YTFsdHJwcnZsZXBmZGc3ZWs0ZGZ5OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/nrY3TgN3JNbUs/giphy.gif" width = 80px>  </picture> Resumen rápido
 <br><br>
 
 Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye todos los oficiales 1xx–5xx (con 425 Too Early) + ~20 “extra” no oficiales (Cloudflare).<br>
@@ -68,7 +68,7 @@ Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye t
 <picture> <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width ="1050" > </picture>
 <br>
 
-### <picture> <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXB5c2oxYnBwdGJpc3hhejl1c3Jzc3cyZTlzOWQ4a2N4dGx4eWdjbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/vYBtBiaNcZF3F3Iaip/giphy.gif" width = 80px>  </picture> Características
+### <picture> <img src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXA0bTNlbWYxZGRvcGpqanA3anlqYmdkeWhoaGdwazlpM3VzZzdybyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/RlAfYHeJFLO78ChAee/giphy.gif" width = 80px>  </picture> Características
 <br><br>
 
 
