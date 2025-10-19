@@ -15,7 +15,7 @@
 
 <br>
 
- **Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye 1xx–5xx oficiales + “extra” no oficiales (Cloudflare, Nginx, etc.), búsqueda instantánea por número/texto, favoritos  y notas  con modal, categorías coloreadas, header/buscador fijo y encabezados de tabla sticky para navegar sin perder contexto. Todo persiste en localStorage y permite importar/exportar preferencias en JSON. Licencia MIT,<a href="https://www.youtube.com/watch?v=mo2vNTUiPnU" target="_blank" rel="noopener">demo de la tool Youtube</a>.** 
+ **charset_mutator.py es una herramienta ofensiva diseñada para generar variantes de payloads web aplicando charsets reales (no transformacionales), cambiando su representación binaria sin alterar su ejecución. Permite descubrir bypass efectivos contra WAFs y filtros que dependen de firmas ASCII, analizar cómo cada charset representa caracteres especiales y automatizar pruebas avanzadas de evasión.,<a href="https://www.youtube.com/watch?v=mo2vNTUiPnU" target="_blank" rel="noopener">demo de la tool Youtube</a>.** 
 <br><br> 
 
 <p align="center">
