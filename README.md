@@ -15,7 +15,7 @@
 
 <br>
 
- **charset_mutadorr.py es una herramienta ofensiva diseñada para generar variantes de payloads web aplicando charsets reales (no transformacionales), cambiando su representación binaria sin alterar su ejecución. Permite descubrir bypass efectivos contra WAFs y filtros que dependen de firmas ASCII, analizar cómo cada charset representa caracteres especiales y automatizar pruebas avanzadas de evasión.,<a href="https://www.youtube.com/watch?v=mo2vNTUiPnU" target="_blank" rel="noopener">demo de la tool Youtube</a>.** 
+ **charset_mutadorr.py es una herramienta ofensiva diseñada para generar variantes de payloads web aplicando charsets reales (no transformacionales), cambiando su representación binaria sin alterar su ejecución. Permite descubrir bypass efectivos contra WAFs y filtros que dependen de firmas ASCII, analizar cómo cada charset representa caracteres especiales y automatizar pruebas avanzadas de evasión, <a href="https://www.youtube.com/watch?v=mo2vNTUiPnU" target="_blank" rel="noopener">demo de la tool Youtube</a>.** 
 <br><br> 
 
 <p align="center">
