@@ -27,22 +27,15 @@
 <br>
 
 ### <picture> <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXk0OXNnNHk0cDV3aWdwMTh2a3pwbmg3b3lha3dubzc5dmdlb3M5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/11QU48jrASWMsE/giphy.gif" width = 75px>  </picture> Problema que resuelve<br><br>
-**Cuando estás auditando aplicaciones web o haciendo bug bounty, interpretar correctamente las respuestas HTTP es clave para entender el comportamiento del backend, detectar configuraciones incorrectas, encontrar vectores explotables o incluso descubrir endpoints sensibles.<br><br>
-• El problema es que la mayoría de las veces:<br><br>
-• Tenés que buscar cada código en Google manualmente.<br><br>
-• Las respuestas “extra” (Cloudflare, Nginx, cPanel, etc.) ni siquiera están documentadas en la RFC.<br><br>
-• No podés guardar notas ni organizar la información relevante.<br><br>
-• Esta herramienta elimina ese cuello de botella: centraliza todos los códigos HTTP oficiales y no oficiales en un solo lugar, accesibles en segundos, con buscador instantáneo, notas, favoritos y exportación de preferencias. Así, pasás menos tiempo buscando y más tiempo analizando.</a>.** 
+**En bypass de WAF, evasión de filtros y pruebas de payloads, la mayoría de scripts solo generan variantes superficiales (entidades, URL encoding, etc.) sin cambiar el binario real. Esta herramienta resuelve ese problema al aplicar charsets reales a los payloads, cambiando su representación byte a byte sin alterar su ejecución, permitiendo descubrir variantes que rompen firmas estáticas, heurísticas simples o parsers frágiles.** 
 
 <br>
 
 ### <picture> <img src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3VtZHVwd2V3dWV1OWtkYTR4dmhuZXV3cHd1NzJmcGsxaGV4YnZ5ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/HHwI031emo0GQ/giphy.gif" width = 75px>  </picture> Qué aporta y cómo beneficia <br><br>
-**• Conocimiento completo en segundos: reúne todos los códigos oficiales (1xx–5xx) y más de 20 códigos “extra” reales utilizados por proveedores como Cloudflare, Nginx o cPanel, incluso los menos conocidos como 425 Too Early. Esto te evita perder tiempo buscando documentación dispersa y te da acceso inmediato a toda la información relevante.<br><br>
-• Aceleración de tu flujo de trabajo: el buscador interno y el soporte para Ctrl + F permiten saltar al instante al código que necesitás analizar, por número, nombre o descripción. Esto agiliza la toma de decisiones y te hace avanzar mucho más rápido en las fases de recon y explotación.<br><br>
-• Mejor contexto y decisiones más inteligentes: entender en segundos qué significa un estado HTTP te da una ventaja táctica: sabés si un endpoint redirige, si hay filtrado activo, si la respuesta proviene de un proxy intermedio o si revela detalles del backend. Esa información puede marcar la diferencia entre un hallazgo superficial y una vulnerabilidad crítica.<br><br>
-• Documentación personalizada sin esfuerzo: cada código tiene un panel de notas editable para agregar observaciones, comportamientos específicos que encontraste o pasos a seguir. Además, podés marcar favoritos y exportar todo como JSON, creando tu propia base de conocimiento reutilizable.<br><br>
-• Uso local, simple y sin dependencias: al funcionar completamente en tu navegador con localStorage, no necesita backend ni conexión. Esto lo hace ideal para laboratorios, entornos aislados o auditorías sin acceso a internet, manteniendo tus datos bajo control total.<br><br>
-• Más foco en la explotación: al tener toda la información centralizada y accesible de inmediato, eliminás el tiempo perdido en búsquedas externas y podés concentrarte en lo que realmente importa: analizar, explotar y reportar vulnerabilidades.</a>.** 
+**• Permite detectar cómo cambian los bytes de caracteres especiales (<, >, ', ", etc.) al usar distintos charsets.<br><br>
+  • Ayuda a descubrir bypass reales contra WAFs que se basan en firmas ASCII.<br><br>
+  • Expone variantes funcionales con codificaciones que alteran el binario (UTF-16, UTF-32, UTF-7, EBCDIC), algo que muchas herramientas no hacen.<br><br>
+  • Acelera laboratorios de XSS, RCE o inyecciones al automatizar la mutación por charset.** 
 
 <br>
 
@@ -53,7 +46,7 @@
 ### <picture> <img src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWxiOWdscHZ3endqOWM0ZjJ0YTFsdHJwcnZsZXBmZGc3ZWs0ZGZ5OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/nrY3TgN3JNbUs/giphy.gif" width = 80px>  </picture> Resumen rápido
 <br><br>
 
-Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye todos los oficiales 1xx–5xx (con 425 Too Early) + ~20 “extra” no oficiales (Cloudflare).<br>
+charset_mutator.py genera variantes de payloads web codificadas con distintos charsets reales (no transformacionales), tanto completas como solo en sus caracteres especiales. Esto permite probar bypass binarios contra WAFs y filtros, detectar inconsistencias de parsing y entender cómo cambian los bytes críticos según el juego de caracteres.<br>
 
 
 • Formato: interfaz web local (HTML/JS), toda la data se guarda en localStorage por defecto (offline, en tu máquina).<br><br>
@@ -71,26 +64,20 @@ Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye t
 ### <picture> <img src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXA0bTNlbWYxZGRvcGpqanA3anlqYmdkeWhoaGdwazlpM3VzZzdybyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/RlAfYHeJFLO78ChAee/giphy.gif" width = 80px>  </picture> Características
 <br><br>
 
+## 2 modos de mutación:<br>
 
-• Iniciar / Parar con botones y atajos (S = iniciar, P = parar).
+• special_only: solo muta caracteres especiales críticos.
 
-• Buscador por categoría y texto: filtra códigos por categoría (1xx, 2xx, 3xx, 4xx, 5xx y extra).
+• full_payload: codifica todo el payload.
 
-• Persistencia local (sin backend) vía localStorage.
+• 100 charsets de texto disponibles automáticamente.
 
-• Ctrl + F (búsqueda rápida): si presionás Ctrl+F e ingresás un código (ej.: 302), el navegador te lleva a la sección/parte donde se describe ese código.
+• 24 BYTE_CHANGERS reales (UTF-16/32, UTF-7, EBCDIC…) que modifican bytes críticos.
 
-• Buscador interno: el campo de búsqueda de la app permite encontrar por número, nombre o descripción y navegar directamente al resultado.
+• Compatibilidad realista: excluye codecs transformacionales (base64, hex, etc.).
 
-• Notas por código: cada código HTTP tiene su panel de notas editable (guardar, editar, eliminar); se muestra la última modificación.
+• Modo estricto: solo genera variantes válidas; si un charset no puede representar el payload, se omite.
 
-• Ocultar/mostrar categorías: podés ocultar categorías completas; recomendado no ocultarlas porque Ctrl+F del navegador no buscará dentro de secciones colapsadas — sí podés usar el buscador interno.
-
-• Favoritos: agrega códigos a “Mis favoritos” para filtrar ruido visual y quedarte solo con lo que te interesa.
-
-• Importar / Exportar: exportá e importá preferencias, favoritos y notas en un JSON (ej.: importa.json).
-
-• Cobertura: incluye todos los códigos HTTP oficiales (1xx–5xx, incluyendo 425 Too Early) y ~20 códigos extra/no oficiales (Cloudflare, Nginx, cPanel, frameworks, etc.) que se usan en la vida real.
 
 <picture> <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width ="1050" > </picture>
 <br>
@@ -98,17 +85,65 @@ Catálogo web interactivo de códigos HTTP para bug bounty/pentesting. Incluye t
 ### <picture> <img src = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2Fka2xkY2VybmR4YWppNGc0czNsZzdnOXMxa2pjNnRlMThsbWFlNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dTWgGXLigmTl2f8Dm3/giphy.gif" width = 80px>  </picture> Uso
 <br><br>
 
+Payload único:<br>
 
-• Búsqueda de códigos HTTP: primero ingrese el código HTTP que le devolvió el servidor (ej.: 429) en el buscador interno, o use Ctrl + F para que el navegador lo lleve a la sección donde se describe ese código.
+```yaml
+python charset_mutator.py --payload "<body onafterprint=alert(1)>" --modes special_only --charsets utf_16 utf_16_be utf_16_le utf_32 utf_32_be utf_32_le utf_7 cp037 cp500
 
-• Uso simple y minimalista: diseñado para que cualquiera lo pueda usar sin complicaciones.
- 
+
+```
+<br>
+
+## Archivo con varios payloads:
+
+```yaml
+python charset_mutator.py --input-file payloads.txt --modes special_only full_payload
+
+
+```
+<br>
+
+## Comando solo charset que cambie el binario del paylodad:
+
+```yaml
+
+python charset_mutator.py --payload '<body onafterprint=alert(1)>'  --modes special_only  --charsets utf_16 utf_16_le utf_16_be utf_32 utf_32_le utf_32_be utf_7  cp037 cp273 cp424 cp500 cp875 cp1026  cp1140 cp1141 cp1142 cp1143 cp1144 cp1145 cp1146 cp1147 cp1148 cp1149
+```
+
  <br>
+
+ ## Compatibilidad automática:
+
+- Si un charset no puede representar alguno de los caracteres especiales del payload →  se salta automáticamente.<br><br>
+
+-Si el payload solo contiene SPECIALS soportados por ese charset →  la variante se genera.<br><br>
+ Esto garantiza que cada línea del output sea válida en la práctica real, sin bytes falsos ni reemplazos artificiales.<br>
+
+
+<br><br>
+
+###  Flags disponibles
+
+>  Usa estas opciones con `charset_mutator.py` para personalizar cómo se generan las variantes:
+
+| Flag | Descripción |
+|------|-------------|
+| `--payload "<PAYLOAD>"` | Payload único a mutar |
+| `--input-file payloads.txt` | Archivo con lista de payloads |
+| `--modes special_only full_payload` | Modos de mutación (`special_only` / `full_payload`) |
+| `--output-dir out` | Directorio de salida (por defecto: `out`) |
+| `--skip-broken` | Saltar charsets que no soportan los caracteres (default) |
+| `--include-broken` | Incluir variantes rotas (rellenando con vacío) |
+| `--base-charset utf-8` | Charset base para caracteres no especiales |
+| `--charsets utf_16 utf_32 ...` | Lista personalizada de charsets |
+| `--report-unsupported` | Solo imprime qué caracteres son soportados por cada charset y termina |
+
+ 
 
 <picture> <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width ="1050" > </picture>
 <br>
 
-### <picture> <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3YwbG9zbmU1amprdTJsbmxzYnpobzd5eGtnazB6b2FmdnllaTRhZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/h8UlsEpqiCISTKUzvz/giphy.gif" width = 80px>  </picture> "Buscar rápido: escribe el código HTTP (ej.: 429) en el buscador para saltar instantáneamente a su descripción completa — incluye todos los códigos (oficiales y no oficiales, incluso los menos conocidos) en un único lugar."
+### <picture> <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3YwbG9zbmU1amprdTJsbmxzYnpobzd5eGtnazB6b2FmdnllaTRhZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/h8UlsEpqiCISTKUzvz/giphy.gif" width = 80px>  </picture> “Cambia los bytes, no el payload — porque el WAF no puede bloquear lo que ya no reconoce.”
 <br>
 
 
