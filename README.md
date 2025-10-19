@@ -15,7 +15,7 @@
 
 <br>
 
- **charset_mutator.py es una herramienta ofensiva diseñada para generar variantes de payloads web aplicando charsets reales (no transformacionales), cambiando su representación binaria sin alterar su ejecución. Permite descubrir bypass efectivos contra WAFs y filtros que dependen de firmas ASCII, analizar cómo cada charset representa caracteres especiales y automatizar pruebas avanzadas de evasión.,<a href="https://www.youtube.com/watch?v=mo2vNTUiPnU" target="_blank" rel="noopener">demo de la tool Youtube</a>.** 
+ **charset_mutadorr.py es una herramienta ofensiva diseñada para generar variantes de payloads web aplicando charsets reales (no transformacionales), cambiando su representación binaria sin alterar su ejecución. Permite descubrir bypass efectivos contra WAFs y filtros que dependen de firmas ASCII, analizar cómo cada charset representa caracteres especiales y automatizar pruebas avanzadas de evasión.,<a href="https://www.youtube.com/watch?v=mo2vNTUiPnU" target="_blank" rel="noopener">demo de la tool Youtube</a>.** 
 <br><br> 
 
 <p align="center">
@@ -46,7 +46,7 @@
 ### <picture> <img src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWxiOWdscHZ3endqOWM0ZjJ0YTFsdHJwcnZsZXBmZGc3ZWs0ZGZ5OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/nrY3TgN3JNbUs/giphy.gif" width = 80px>  </picture> Resumen rápido
 <br><br>
 
-charset_mutator.py genera variantes de payloads web codificadas con distintos charsets reales (no transformacionales), tanto completas como solo en sus caracteres especiales. Esto permite probar bypass binarios contra WAFs y filtros, detectar inconsistencias de parsing y entender cómo cambian los bytes críticos según el juego de caracteres.<br>
+charset_mutadorr.py genera variantes de payloads web codificadas con distintos charsets reales (no transformacionales), tanto completas como solo en sus caracteres especiales. Esto permite probar bypass binarios contra WAFs y filtros, detectar inconsistencias de parsing y entender cómo cambian los bytes críticos según el juego de caracteres.<br>
 
 
 • Formato: interfaz web local (HTML/JS), toda la data se guarda en localStorage por defecto (offline, en tu máquina).<br><br>
@@ -88,7 +88,7 @@ charset_mutator.py genera variantes de payloads web codificadas con distintos ch
 Payload único:<br>
 
 ```yaml
-python charset_mutator.py --payload "<body onafterprint=alert(1)>" --modes special_only --charsets utf_16 utf_16_be utf_16_le utf_32 utf_32_be utf_32_le utf_7 cp037 cp500
+python charset_mutadorr.py --payload "<body onafterprint=alert(1)>" --modes special_only --charsets utf_16 utf_16_be utf_16_le utf_32 utf_32_be utf_32_le utf_7 cp037 cp500
 
 
 ```
@@ -97,7 +97,7 @@ python charset_mutator.py --payload "<body onafterprint=alert(1)>" --modes speci
 ## Archivo con varios payloads:
 
 ```yaml
-python charset_mutator.py --input-file payloads.txt --modes special_only full_payload
+python charset_mutadorr.py --input-file payloads.txt --modes special_only full_payload
 
 
 ```
@@ -107,7 +107,7 @@ python charset_mutator.py --input-file payloads.txt --modes special_only full_pa
 
 ```yaml
 
-python charset_mutator.py --payload '<body onafterprint=alert(1)>'  --modes special_only  --charsets utf_16 utf_16_le utf_16_be utf_32 utf_32_le utf_32_be utf_7  cp037 cp273 cp424 cp500 cp875 cp1026  cp1140 cp1141 cp1142 cp1143 cp1144 cp1145 cp1146 cp1147 cp1148 cp1149
+python charset_mutadorr.py --payload '<body onafterprint=alert(1)>'  --modes special_only  --charsets utf_16 utf_16_le utf_16_be utf_32 utf_32_le utf_32_be utf_7  cp037 cp273 cp424 cp500 cp875 cp1026  cp1140 cp1141 cp1142 cp1143 cp1144 cp1145 cp1146 cp1147 cp1148 cp1149
 ```
 
  <br>
@@ -124,7 +124,7 @@ python charset_mutator.py --payload '<body onafterprint=alert(1)>'  --modes spec
 
 ###  Flags disponibles
 
->  Usa estas opciones con `charset_mutator.py` para personalizar cómo se generan las variantes:
+>  Usa estas opciones con `charset_mutadorr.py` para personalizar cómo se generan las variantes:
 
 | Flag | Descripción |
 |------|-------------|
