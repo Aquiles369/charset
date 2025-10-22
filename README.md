@@ -128,7 +128,7 @@ python charset_mutadorr.py --payload '<body onafterprint=alert(1)>'  --modes spe
 
 | Flag | Descripción |
 |------|-------------|
-| `--payload "<PAYLOAD>"` | Payload único a mutar |
+| `payload "<PAYLOAD>"` | Payload único a mutar |
 | `--input-file payloads.txt` | Archivo con lista de payloads |
 | `--modes special_only full_payload` | Modos de mutación (`special_only` / `full_payload`) |
 | `--output-dir out` | Directorio de salida (por defecto: `out`) |
