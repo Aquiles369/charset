@@ -128,7 +128,7 @@ python charset_mutadorr.py --payload '<body onafterprint=alert(1)>'  --modes spe
 
 | Flag | Descripción |
 |------|-------------|
-| `payload "<PAYLOAD>"` | Payload único a mutar |
+| `--payload "<PAYLOAD>"` | Payload único a mutar |
 | `--input-file payloads.txt` | Archivo con lista de payloads |
 | `--modes special_only full_payload` | Modos de mutación (`special_only` / `full_payload`) |
 | `--output-dir out` | Directorio de salida (por defecto: `out`) |
@@ -136,8 +136,6 @@ python charset_mutadorr.py --payload '<body onafterprint=alert(1)>'  --modes spe
 | `--include-broken` | Incluir variantes rotas (rellenando con vacío) |
 | `--base-charset utf-8` | Charset base para caracteres no especiales |
 | `--charsets utf_16 utf_32 ...` | Lista personalizada de charsets |
-| `--report-unsupported` | Solo imprime qué caracteres son soportados por cada charset y termina |
-
 <br>
 
  
