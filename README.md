@@ -49,12 +49,6 @@
 charset_mutadorr.py genera variantes de payloads web codificadas con distintos charsets reales (no transformacionales), tanto completas como solo en sus caracteres especiales. Esto permite probar bypass binarios contra WAFs y filtros, detectar inconsistencias de parsing y entender cómo cambian los bytes críticos según el juego de caracteres.<br>
 
 
-• Formato: interfaz web local (HTML/JS), toda la data se guarda en localStorage por defecto (offline, en tu máquina).<br><br>
-
-• Pasos a seguir:<br>
-1. Descarga el repositorio.<br>
-2. Abra el archivo Estados_servidor.html en con su navegador preferido.<br>
-3. Introduzca el código de estado (ej.: 429) o presione Ctrl + F y busque "429".<br>
 
 <br>
 
